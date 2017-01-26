@@ -70,6 +70,7 @@
             android:background="@color/white"/>
 
         <ImageButton
+            android:id="@+id/bt3"
             android:layout_width="0dp"
             android:layout_margin="6dp"
             android:layout_height="match_parent"
