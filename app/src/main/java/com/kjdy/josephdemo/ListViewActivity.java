@@ -24,12 +24,13 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         //QUIZ = why this
         ListViewAdapter listViewAdapter = new ListViewAdapter(this);
         listView.setAdapter(listViewAdapter);
+        listView.setOnItemClickListener(this);
     }
 
-
+    //making a toast when item is clicked
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this,"listView wa clicked at position: "+position,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"listView wa clicked at position: "+position, Toast.LENGTH_LONG).show();
 
 
     }

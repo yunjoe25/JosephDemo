@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         bt3 = (ImageButton) findViewById(R.id.bt3);
     }
 
+
+
     private void initialListener(){
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // more practical when user clicks the button frequently
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // called in ImageButton: onclick function (activity_main.xml)
+    // everytime function is called, program searches for id making process long
     public void onClick(View v){
         Toast.makeText(this,"Button2 was clicked", Toast.LENGTH_SHORT).show();
     }
