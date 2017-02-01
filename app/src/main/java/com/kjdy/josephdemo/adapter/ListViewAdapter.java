@@ -59,6 +59,7 @@ public class ListViewAdapter extends BaseAdapter {
             convertView.setTag(holder);
         }
         else{
+            //getTag() returns object => cast ViewHolder
             holder = (ViewHolder) convertView.getTag();
         }
         holder.textView1.setText(String.valueOf(position));
