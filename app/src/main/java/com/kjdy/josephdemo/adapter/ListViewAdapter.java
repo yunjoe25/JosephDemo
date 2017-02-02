@@ -74,6 +74,9 @@ public class ListViewAdapter extends BaseAdapter {
         }
 
 
+        //if you don't use viewholder
+        //we have to initiate view every time
+
 //        View rowView = mInflater.inflate(R.layout.list_item,parent,false);
 //        TextView textView = (TextView)rowView.findViewById(R.id.list_view_tv);
 //        textView.setText(String.valueOf(position));

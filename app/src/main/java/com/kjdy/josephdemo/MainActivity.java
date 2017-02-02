@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),"Button1 was clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),"bt1 clicked", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(v.getContext(), ViewPagerActivity.class); //initializing intent
+                startActivity(intent); // go to other activity
             }
         });
 
