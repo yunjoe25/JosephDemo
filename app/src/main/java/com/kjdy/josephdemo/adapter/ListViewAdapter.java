@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.kjdy.josephdemo.R;
 
+import java.util.ArrayList;
+
 /**
  * Created by yunjo on 1/25/2017.
  */
@@ -17,16 +19,19 @@ public class ListViewAdapter extends BaseAdapter {
 
     private final LayoutInflater mInflater;
     private Context mContext;
+    private ArrayList<String> ListResult;
 
-    public ListViewAdapter(Context context) {
+    public ListViewAdapter(Context context, ArrayList<String> ListResult) {
+
         mContext = context;
+        this.ListResult = ListResult;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     //called once when adapter was called.
     @Override
     public int getCount() {
-        return 100;
+        return ListResult.size();
     }
 
     @Override
@@ -64,17 +69,19 @@ public class ListViewAdapter extends BaseAdapter {
         }
         holder.textView1.setText(String.valueOf(position));
         holder.textView3.setText(String.valueOf(position));
+        holder.textView2.setText(ListResult.get(position));
 
         if(position%2 == 0){
             holder.textView1.setVisibility(View.VISIBLE);
             holder.textView3.setVisibility(View.INVISIBLE);
+
         } else{
             holder.textView1.setVisibility(View.INVISIBLE);
             holder.textView3.setVisibility(View.VISIBLE);
         }
 
 
-        //if you don't use viewholder
+        //if you don't use view holder
         //we have to initiate view every time
 
 //        View rowView = mInflater.inflate(R.layout.list_item,parent,false);
