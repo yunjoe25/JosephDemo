@@ -13,7 +13,7 @@ import com.kjdy.josephdemo.fragment.LoginFragment;
 
 import java.util.ArrayList;
 
-public class ViewPagerActivity extends AppCompatActivity {
+public class ViewPagerActivity extends BaseActivity {
 
     private  ViewPager viewPager;
     private ArrayList<Fragment> fragmentList = new ArrayList<Fragment>();
@@ -23,6 +23,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
+        showToastLong("ViewPagerActivity.java was executed.");
         initialView();
 
     }

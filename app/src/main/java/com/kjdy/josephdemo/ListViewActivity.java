@@ -15,7 +15,7 @@ import com.kjdy.josephdemo.adapter.ListViewAdapter;
 
 import java.util.ArrayList;
 
-public class ListViewActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ListViewActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
     private ListView listView;
     private ArrayList<String> ListResult;
@@ -31,17 +31,17 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
     }
 
     private void createFakeResult(){
-        ListResult.add("A");
-        ListResult.add("B");
-        ListResult.add("C");
+        ListResult.add("AZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+        ListResult.add("BCCCCCCCCCCCCCCCG");
+        ListResult.add("CGGGGGGGGGGGGGGGGGGG");
         ListResult.add("D");
         ListResult.add("E");
         ListResult.add("F");
         ListResult.add("G");
-        ListResult.add("H");
+        ListResult.add("HNNNNNNNNN");
         ListResult.add("I");
         ListResult.add("J");
-        ListResult.add("K");
+        ListResult.add("KHHHHH");
         ListResult.add("L");
         ListResult.add("M");
         ListResult.add("N");
@@ -63,7 +63,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         listView.addHeaderView(listViewHeader);
 
 
-
+        // Textview added manually
         TextView tv = new TextView(this);
         tv.setText("We have no more content.");
         tv.setTextSize(28);
@@ -73,12 +73,14 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         listView.setAdapter(listViewAdapter);
         listView.setOnItemClickListener(this);
 
+        showToastLong("ListViewActivity.java was executed");
+
     }
 
     //making a toast when item is clicked
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this,"listView was clicked at position: "+position, Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"listView was clicked at position: "+ position, Toast.LENGTH_LONG).show();
         //key = your class name
         Log.d("testListViewActivity",String.valueOf(position));
 

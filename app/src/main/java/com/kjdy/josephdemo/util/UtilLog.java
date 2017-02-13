@@ -14,6 +14,11 @@ public class UtilLog {
         Debug = b;
     }
 
+    public static boolean getDebug(){
+        return Debug;
+    }
+
+
     public static void logE(String key, String value){
         if(Debug){
             Log.e(key,value);

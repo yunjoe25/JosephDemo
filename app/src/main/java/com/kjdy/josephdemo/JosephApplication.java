@@ -1,6 +1,7 @@
 package com.kjdy.josephdemo;
 
 import android.app.Application;
+import android.widget.Toast;
 
 import com.kjdy.josephdemo.util.UtilLog;
 
@@ -14,7 +15,15 @@ public class JosephApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // Utilizing UtilLog by setting switch to true
         UtilLog.setDebug(true);
+
+        // toasting debug status
+        if(UtilLog.getDebug()){
+            Toast.makeText(this,"UtilLog Debug is turned on",Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this,"UtilLog Debug is turned off",Toast.LENGTH_LONG).show();
+        }
 
     }
 }
