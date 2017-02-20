@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.kjdy.josephdemo.ListViewActivity">
 
-<ListView
-    android:id="@+id/list_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light">
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:layout_below="@+id/list_view_pager">
+    </ListView>
 
-</ListView>
+
 </RelativeLayout>

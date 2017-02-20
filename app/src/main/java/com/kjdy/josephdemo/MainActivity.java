@@ -1,18 +1,27 @@
 package com.kjdy.josephdemo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
-
+import com.kjdy.josephdemo.bean.Book;
 import com.kjdy.josephdemo.util.UtilLog;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
     private ImageButton bt1,bt3;
+
+    // Butterknife implementation of button
+    @OnClick(R.id.bt2)
+    public void button2Click(){
+        Intent intent = new Intent(this, DialogActivity.class); //initializing intent
+        startActivityForResult(intent,2);
+//        toActivity(DialogActivity.class);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +29,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         initialView();
         initialListener();
+        ButterKnife.bind(this);
     }
 
     private void initialView(){
@@ -36,7 +46,18 @@ public class MainActivity extends BaseActivity {
 //                Toast.makeText(v.getContext(),"bt1 clicked", Toast.LENGTH_LONG).show();
                 showToastLong("button 1 was clicked");
                 Intent intent = new Intent(v.getContext(), ViewPagerActivity.class); //initializing intent
-                startActivity(intent); // go to other activity
+                intent.putExtra("key","value");//putting string
+                Bundle bundle = new Bundle();// bundle
+                bundle.putInt("Integer", 12345); // int bundle
+
+
+                Book book = new Book();
+                book.setName("Android");
+                book.setAuthor("Joseph");
+                bundle.putSerializable("book", book); // can only store object in bundle ***************
+                intent.putExtras(bundle);
+
+                startActivityForResult(intent,1); // go to other activity
             }
         });
 
@@ -44,13 +65,34 @@ public class MainActivity extends BaseActivity {
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toActivity(ListViewActivity.class);
+                Intent intent = new Intent(v.getContext(), ListViewActivity.class); //initializing intent
+                startActivityForResult(intent,3);
+//                toActivity(ListViewActivity.class);
 //
 //                Intent intent = new Intent(v.getContext(), ListViewActivity.class); //initializing intent
 //                startActivity(intent); // go to other activity
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case 1: // 1 = ViewPagerActivity
+                String message = data.getStringExtra("message");
+                showToastShort(message);
+                break;
+            case 2:
+                showToastShort("Dialog");
+                break;
+            case 3:
+                showToastShort("ListViewActivity");
+                break;
+            default:
+
+        }
     }
 
     // called in ImageButton: onclick function (activity_main.xml)
@@ -61,14 +103,9 @@ public class MainActivity extends BaseActivity {
         //Base Activity
         showToastLong("Button 2 was clicked");
         //setting up to turn on log report for application
+        // d = debug, v = verbose, i = info, e = error
         UtilLog.logD("testD", "Toast");
 
-//        Log.d("testD","Toast");
-        // d = debug, v = verbose, i = info, e = error
-//        Log.e("testD","Toast");
-//        Log.i("testD","Toast");
-//        Log.v("testD","Toast");
-//        Log.w("testD","Toast");
 
 
     }

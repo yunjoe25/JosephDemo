@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/list_view_header"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@color/white">
+    android:background="@android:color/holo_orange_light">
 
-    <TextView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/list_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="ListViewHeader"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:textColor="@color/black"/>
+        android:layout_height="80dp">
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
