@@ -17,7 +17,7 @@ import butterknife.OnClick;
  */
 
 public class standardActivity extends BaseActivity {
-    private Button bt1,bt2,bt3,bt4;
+   // private Button bt1,bt2,bt3,bt4;
 
 
     @OnClick(R.id.standardBt1)
@@ -55,10 +55,10 @@ public class standardActivity extends BaseActivity {
         initialView();
     }
     private void initialView(){
-        bt1 = (Button) findViewById(R.id.standardBt1);
-        bt2 = (Button) findViewById(R.id.standardBt2);
-        bt3 = (Button) findViewById(R.id.standardBt3);
-        bt4 = (Button) findViewById(R.id.standardBt4);
+//        bt1 = (Button) findViewById(R.id.standardBt1);
+//        bt2 = (Button) findViewById(R.id.standardBt2);
+//        bt3 = (Button) findViewById(R.id.standardBt3);
+//        bt4 = (Button) findViewById(R.id.standardBt4);
 
     }
 

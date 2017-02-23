@@ -15,7 +15,7 @@ import butterknife.OnClick;
  */
 
 public class singleTopActivity extends BaseActivity {
-    private Button bt1,bt2,bt3,bt4;
+    //private Button bt1,bt2,bt3,bt4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +53,9 @@ public class singleTopActivity extends BaseActivity {
 
     private void initialView(){
 
-        bt1 = (Button) findViewById(R.id.singletopBT1);
-        bt2 = (Button) findViewById(R.id.standardBt2);
-        bt3 = (Button) findViewById(R.id.standardBt3);
-        bt4 = (Button) findViewById(R.id.standardBt4);
+//        bt1 = (Button) findViewById(R.id.singletopBT1);
+//        bt2 = (Button) findViewById(R.id.standardBt2);
+//        bt3 = (Button) findViewById(R.id.standardBt3);
+//        bt4 = (Button) findViewById(R.id.standardBt4);
     }
 }
