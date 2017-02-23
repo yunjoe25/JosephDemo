@@ -27,6 +27,7 @@
             android:textColor="@color/white" />
 
         <ImageButton
+            android:id="@+id/topBt1"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@android:color/transparent"
@@ -36,6 +37,7 @@
             android:layout_marginRight="12dp"/>
 
         <ImageButton
+            android:id="@+id/topBt2"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@android:color/transparent"

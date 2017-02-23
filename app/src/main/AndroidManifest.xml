@@ -20,6 +20,10 @@
         <activity android:name=".ViewPagerActivity"/>
         <activity android:name=".BaseActivity"/>
         <activity android:name=".DialogActivity"/>
+        <activity android:name=".launchMode.standardActivity" android:launchMode="standard"/>
+        <activity android:name=".launchMode.singleTopActivity" android:launchMode="singleTop"/>
+        <activity android:name=".launchMode.singleTaskActivity" android:launchMode="singleTask"/>
+        <activity android:name=".launchMode.singleInstanceActivity" android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

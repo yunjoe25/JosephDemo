@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import com.kjdy.josephdemo.bean.Book;
+import com.kjdy.josephdemo.launchMode.standardActivity;
 import com.kjdy.josephdemo.util.UtilLog;
 
 import butterknife.ButterKnife;
@@ -19,6 +20,13 @@ public class MainActivity extends BaseActivity {
     @OnClick(R.id.bt2)
     public void button2Click(){
         Intent intent = new Intent(this, DialogActivity.class); //initializing intent
+        startActivityForResult(intent,2);
+//        toActivity(DialogActivity.class);
+    }
+
+    @OnClick(R.id.topBt1)
+    public void button1Click(){
+        Intent intent = new Intent(this,  standardActivity.class); //initializing intent
         startActivityForResult(intent,2);
 //        toActivity(DialogActivity.class);
     }

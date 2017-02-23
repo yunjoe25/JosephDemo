@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_singletask">
+
+    <TextView
+        android:text="C"
+        android:textSize="150dp"
+        android:textAlignment="center"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/standardTextView" />
+
+    <LinearLayout
+        android:id="@+id/singletaskLinearButton"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+
+        <Button
+            android:id="@+id/singletaskBt1"
+            android:text="A"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/singletaskBt2"
+            android:text="B"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:background="@color/white" />
+
+        <Button
+            android:text="C"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/singletaskBt3"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:background="@color/white" />
+
+        <Button
+            android:text="D"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/singletaskBt4"
+            android:layout_width="0dp"
+            android:layout_margin="6dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:background="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>
