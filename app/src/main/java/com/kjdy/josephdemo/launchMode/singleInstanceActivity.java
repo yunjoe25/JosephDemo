@@ -19,6 +19,9 @@ public class singleInstanceActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleinstance);
         ButterKnife.bind(this);
+
+
+
     }
     @OnClick(R.id.singleinstanceBt1)
     public void button1Click(){

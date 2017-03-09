@@ -30,18 +30,18 @@ public class ViewPagerActivity extends BaseActivity {
         Intent intent = getIntent(); // pass on object from one to another activities
         Bundle bundle = intent.getExtras();// pass on object from one to another activities
 
-        Book book = (Book) bundle.getSerializable("book");
+//        Book book = (Book) bundle.getSerializable("book");
 
-
-        String message = intent.getStringExtra("key");
-
-        int number = bundle.getInt("Integer", 0);
-        int fakeNumber = bundle.getInt("fake",0);
-
-        UtilLog.logD("ViewPagerActivity, value is ", message);
-        UtilLog.logD("ViewPagerActivity, number is ", ""+number);
-        UtilLog.logD("ViewPagerActivity, number is ", String.valueOf(fakeNumber));
-        UtilLog.logD("ViewPagerActivity, book author is ", book.getAuthor());
+//
+//        String message = intent.getStringExtra("key");
+//
+//        int number = bundle.getInt("Integer", 0);
+//        int fakeNumber = bundle.getInt("fake",0);
+//
+//        UtilLog.logD("ViewPagerActivity, value is ", message);
+//        UtilLog.logD("ViewPagerActivity, number is ", ""+number);
+//        UtilLog.logD("ViewPagerActivity, number is ", String.valueOf(fakeNumber));
+//        UtilLog.logD("ViewPagerActivity, book author is ", book.getAuthor());
 
         initialView();
 

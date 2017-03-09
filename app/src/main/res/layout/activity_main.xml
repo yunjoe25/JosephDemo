@@ -85,16 +85,52 @@
 
     </LinearLayout>
 
-    <ListView
+    <FrameLayout
+        android:id="@+id/main_fl"
         android:layout_above="@id/tool_bar"
         android:layout_below="@id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <Button
+            android:id="@+id/bt_main_timer"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Timer"
+            android:gravity="center"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/bt_animation"
+            android:layout_width="100dp"
+            android:textAllCaps="false"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Animation"
+            android:layout_marginLeft="100dp"/>
 
 
-    </ListView>
+        <Button
+            android:id="@+id/bt_animator"
+            android:layout_width="100dp"
+            android:textAllCaps="false"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Animator"
+            android:layout_marginLeft="200dp" />
+
+        <Button
+            android:id="@+id/bt_main_custom_diag"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="Custom Main"
+            android:layout_marginTop="60dp"/>
+
+    </FrameLayout>
 
 
 </RelativeLayout>

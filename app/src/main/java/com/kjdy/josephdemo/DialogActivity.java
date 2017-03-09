@@ -5,6 +5,9 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
@@ -25,7 +28,26 @@ import butterknife.OnClick;
 public class DialogActivity extends BaseActivity {
 
     private int checkedID;
+    private final int DIALOG = 12345;
 
+
+    //progress bar
+    Handler mHandler = new Handler(Looper.getMainLooper()){
+        @Override
+        public void handleMessage(Message msg){
+            switch (msg.what){
+                case DIALOG :
+                    Bundle bundle = msg.getData();
+                    String s = bundle.getString("msg");
+                    showToastShort("Dialog Message: "+s);
+                    break;
+                default:
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+
+    };
     //Butterknife implementation
     @BindView(R.id.rdg) RadioGroup radioGroup;
     @OnClick(R.id.dialog_ok)
@@ -73,7 +95,7 @@ public class DialogActivity extends BaseActivity {
                 finish();
             }
         });
-//        dialog.setTitle("HELLO");
+        dialog.setTitle("HELLO");
         dialog.show();
 
     }
@@ -82,7 +104,7 @@ public class DialogActivity extends BaseActivity {
     private void inputDialog() {
         final EditText editText = new EditText(this);
         AlertDialog.Builder inputDialog = new AlertDialog.Builder(this);
-        inputDialog.setTitle("Iam an input Dialog").setView(editText);
+        inputDialog.setTitle("I am an input Dialog").setView(editText);
         inputDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -117,8 +139,17 @@ public class DialogActivity extends BaseActivity {
                     }
                 }
 //                showToastShort("Download Success");
-                progressDialog.cancel();
 
+                Bundle bundle = new Bundle();
+                bundle.putString("msg", "Download success");
+
+                Message msg = new Message();
+//                Message msg =  mHandler.obtainMessage();
+                msg.what =  DIALOG;
+                msg.setData(bundle);
+                mHandler.sendMessage(msg);
+                progressDialog.cancel();
+//                showToastShort("Download success");
             }
         }).start();
 

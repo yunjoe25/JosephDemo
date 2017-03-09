@@ -42,13 +42,13 @@ public class ListViewActivity extends BaseActivity implements AdapterView.OnItem
 
     private void createFakeResult(){
         ListResult.add("AZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
-        ListResult.add("BCCCCCCCCCCCCCCCG");
+        ListResult.add("B");
         ListResult.add("CGGGGGGGGGGGGGGGGGGG");
         ListResult.add("D");
         ListResult.add("E");
         ListResult.add("F");
         ListResult.add("G");
-        ListResult.add("HNNNNNNNNN");
+        ListResult.add("H");
         ListResult.add("I");
         ListResult.add("J");
         ListResult.add("KHHHHH");
