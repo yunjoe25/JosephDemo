@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Main_Activity"
+            android:title="Main Activity" />
+        <item
+            android:id="@+id/ViewPage_Activity"
+            android:title="ViewPage Activity" />
+        <item
+            android:id="@+id/ListView_Activity"
+            android:title="ListView Activity" />
+        <item
+            android:id="@+id/Activity_A"
+            android:title="ActivityA" />
+        <item
+            android:id="@+id/Activity_B"
+            android:title="ActivityB" />
+        <item
+            android:id="@+id/Activity_C"
+            android:title="ActivityC" />
+        <item
+            android:id="@+id/Activity_D"
+            android:title="ActivityD" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>
