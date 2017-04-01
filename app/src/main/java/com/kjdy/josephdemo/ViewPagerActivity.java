@@ -31,7 +31,6 @@ public class ViewPagerActivity extends BaseActivity {
         Bundle bundle = intent.getExtras();// pass on object from one to another activities
 
 //        Book book = (Book) bundle.getSerializable("book");
-
 //
 //        String message = intent.getStringExtra("key");
 //

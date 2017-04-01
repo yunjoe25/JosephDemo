@@ -74,7 +74,6 @@ public class MainCustomDialog extends Dialog {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 checkedID = checkedId;
-//                Toast.makeText("You checked the RadioButton"+ checkedId);
             }
 
 

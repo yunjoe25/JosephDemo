@@ -42,11 +42,19 @@ public class TimerActivity extends BaseActivity {
     final View.OnClickListener start = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
+
             editText.setEnabled(false);
-            time = Integer.valueOf(editText.getText().toString());
-            timerButton.setText("Stop");
-            timerButton.setOnClickListener(stop);
-            mHandler.postDelayed(runnable,1000);
+            try {
+                time = Integer.valueOf(editText.getText().toString());
+            } catch (NumberFormatException e){
+                showToastShort("Enter time > 0");
+                editText.setEnabled(true);
+            }
+            if (time > 0) {
+                timerButton.setText("Stop");
+                timerButton.setOnClickListener(stop);
+                mHandler.postDelayed(runnable, 1000);
+            }
         }
     };
     final View.OnClickListener stop = new View.OnClickListener() {
